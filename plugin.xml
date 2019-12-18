@@ -5,6 +5,18 @@
 	<description>Secures your app from displaying a screenshot in task switchers under Android and iOS. Keeps sensitive information private.</description>
 	<license>MIT</license>
 
+	<platform name="android">
+
+    <config-file parent="/*" target="res/xml/config.xml">
+      <feature name="PrivacyScreenPlugin">
+        <param name="android-package" value="org.devgeeks.privacyscreen.PrivacyScreenPlugin"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+		<source-file src="src/android/PrivacyScreenPlugin.java" target-dir="src/org/devgeeks/privacyscreen"/>
+	</platform>
+
 	<platform name="ios">
 
     <config-file parent="/*" target="config.xml">
